@@ -5,7 +5,6 @@
  *
  * Return: Always 0 (Success)
 */
-s
 int main(void)
 {
 	char i;
