@@ -8,11 +8,11 @@
 
 int main(void)
 {
-        int i;
-        while ()
-        {
-                /* code */
-        }
+    int i = 122;
+    do {
+    putchar(i);
+    i--;
+    } while (i >= 97);
 
-        return (0);
+    return (0);
 }
