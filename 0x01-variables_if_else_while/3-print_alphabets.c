@@ -2,14 +2,15 @@
 #include <ctype.h>
 
 /**
- * entry main
+ * main - Entry point
  *
- * return (0);
- */
+ * Return: Always 0 (Success)
+*/
 
 int main(void)
 {
 	int i, c;
+
 	for (i = 'a'; i <= 'z'; i++)
 	{
 		putchar(i);
@@ -17,7 +18,6 @@ int main(void)
 
 	for (c = 'a'; c <= 'z'; c++)
 	{
-
 		putchar(toupper(c));
 	}
 	putchar('\n');
