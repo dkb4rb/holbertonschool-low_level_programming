@@ -13,6 +13,6 @@ int main(void)
     putchar(i);
     i--;
     } while (i >= 97);
-
+    putchar('\n');
     return (0);
 }
