@@ -12,7 +12,7 @@ int main(void)
 
 	for (init = 0; init <= 89; init++)
 	{
-		putchar(printf("%.2c", init));
+		putchar(printf("%.2d", init));
 
 		if (init != 89)
 		{
