@@ -6,7 +6,7 @@
 * Return: 1 if c is lowercase, 0 otherwise
 */
 
-int _islower(int c)
+int _isalpha(int c);
 {
 	if ((c <= 65) && (c >= 90))
 	{
