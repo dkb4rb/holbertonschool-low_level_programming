@@ -13,7 +13,7 @@ int buc = 0;
 
 while (buc <= 9)
 {
-for (init = 97; init < end; init++)
+for (init = 97; init <= end; init++)
 {
 _putchar(init);
 }
