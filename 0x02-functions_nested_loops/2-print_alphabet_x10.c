@@ -1,12 +1,11 @@
 #include "holberton.h"
 
 /**
- * main - Entry point
+ *print_alphabet_x10 - public alphabet in uppercase metod
  *
- * Return: Always 0 (Success)
 */
 
-int main(void)
+void print_alphabet_x10(void)
 {
 int init;
 int end = 122;
