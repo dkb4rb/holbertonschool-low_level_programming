@@ -1,8 +1,9 @@
 #include "holberton.h"
 
 /**
- * Printf alphabet_normalaize
+*print_alphabet - normalaise in lowercase on reverse mode
 */
+
 void print_alphabet(void)
 {
 int init;
