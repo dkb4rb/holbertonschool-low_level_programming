@@ -1,11 +1,8 @@
 #include "holberton.h"
 
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * Printf alphabet_normalaize
 */
-
 void print_alphabet(void)
 {
 int init;
@@ -14,5 +11,5 @@ for (init = 97; init < end; init++)
 {
 _putchar(init);
 }
-return (0);
+_putchar('\n');
 }
