@@ -8,13 +8,11 @@
 
 int main(void)
 {
-	char d[10] = "Holberton\n";
-	int g;
-
-	for (g = 0; g < 10; g++)
-	{
-		_putchar(d[g]);
-
-	}
-	return (0);
+char d[10] = "Holberton\n";
+int g;
+for (g = 0; g < 10; g++)
+{
+_putchar(d[g]);
+}
+return (0);
 }
