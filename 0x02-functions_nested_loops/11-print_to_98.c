@@ -27,9 +27,9 @@ void print_to_98(int n)
 	}
 	else if (value > 98)
 	{
-		for (; value >= 98; x--)
+		for (; value >= 98; value--)
 		{
-			if (x != 98)
+			if (value != 98)
 			{
 				printf("%i, ", value);
 			}
