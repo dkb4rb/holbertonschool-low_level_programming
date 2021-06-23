@@ -6,14 +6,15 @@
  * Return: Always 0 (Success)
 */
 
-int _putchar(char c)
+int main(void)
 {
-char c[10] = "Holberton\n";
-int m;
+	char d[10] = "Holberton\n";
+	int g;
 
-for (m = 0; m < 10; m++)
-{
-_putchar(c[m]);
-}
-return (0);
+	for (g = 0; g < 10; g++)
+	{
+		_putchar(d[g]);
+
+	}
+	return (0);
 }
