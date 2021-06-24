@@ -10,7 +10,7 @@ int naturals = 48;
 while (naturals <= 57)
 {
 _putchar(naturals);
-numbers++;
+naturals++;
 }
 _putchar('\n');
 }
