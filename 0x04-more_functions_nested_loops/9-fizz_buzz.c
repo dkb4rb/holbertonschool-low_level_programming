@@ -1,13 +1,13 @@
 #include <stdio.h>
 
 /**
- * main - main function
- * Return: 0
+* main - Fizz-Buzz code testing
+* Return: 0
 **/
 
 int main(void)
 {
-	int Bz= 1 ;
+	int Bz = 1;
 
 	while (Bz <= 100)
 	{
