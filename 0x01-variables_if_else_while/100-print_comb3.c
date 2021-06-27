@@ -7,16 +7,16 @@
   */
 int main(void)
 {
-	int c, i;
+	int d, g;
 
-	for (c = '0'; c <= '9'; c++)
+	for (d = '0'; d <= '9'; d++)
 	{
-		for (i = '0'; i <= '9'; i++)
+		for (g = '0'; g <= '9'; g++)
 		{
-			if (c < i)
+			if (d < g)
 			{
-				putchar(c);
-				putchar(i);
+				putchar(d);
+				putchar(g);
 
 				if (c != '8' || (c == '8' && i != '9'))
 				{
