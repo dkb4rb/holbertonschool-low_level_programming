@@ -8,7 +8,7 @@
 int main(void)
 {
 
-int h,m,i;
+int h, m;
 for ( h = 0; h < 99; h++ )
 {
      
@@ -17,17 +17,15 @@ for ( h = 0; h < 99; h++ )
             
         putchar((h / 10) + '0');
         putchar((h % 10) + '0');
-        putchar(':');
+        putchar(' ');
         putchar((m / 10) + '0');
         putchar((m % 10) + '0');
-        putchar('\n');
-        
-      }
-      
-        
-   
-}
+        putchar(',');
+         putchar(' ');
 
+    
+      }
+}
     putchar('\n');
     return (0);
 }
