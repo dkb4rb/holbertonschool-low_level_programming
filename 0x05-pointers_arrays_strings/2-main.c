@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-    char str;
+    char *str;
     int len;
 
     str = "Holberton!";
