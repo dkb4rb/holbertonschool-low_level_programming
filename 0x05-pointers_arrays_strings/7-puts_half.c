@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- *puts_half - print values of five int.
+ *puts_half - print values of int.
  *@str: is pointer value
  */
 
@@ -11,7 +11,7 @@ void puts_half(char *str)
 
 	for (; str[i] != '\0'; i++)
 	{
-		if (str[i] != '4' && str[i] >= '5')
+		if (i >= 5)
 		{
 			_putchar(str[i]);
 		}
