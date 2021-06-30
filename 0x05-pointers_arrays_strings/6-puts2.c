@@ -13,8 +13,8 @@ void puts2(char *str)
 	while (c < 8)
 	{
 		c++;
-		putchar(*str);
+		_putchar(*str);
 		str = str + 2;
 	}
-	putchar('\n');
+	_putchar('\n');
 }
