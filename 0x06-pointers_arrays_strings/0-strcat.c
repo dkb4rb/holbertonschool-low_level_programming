@@ -7,9 +7,9 @@
  *Return: dest
  */
 
-char *_strcat(char *dest, char *src)
+char *strcat(char *dest, const char *src)
 {
-	int i, len = 0;
+	int i = 0, len = 0;
 
 	while (dest[i++])
 	{
