@@ -1,13 +1,13 @@
 #include "holberton.h"
 
 /**
- *_strcat - convert two lines in one string
+ *_strcat - convert two lines in one  char
  *@dest: value of a return
  *@src: value with contain string
  *Return: dest
  */
 
-char *strcat(char *dest, const char *src)
+char *_strcat(char *dest, char *src)
 {
 	int i = 0, len = 0;
 
