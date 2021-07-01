@@ -1,0 +1,28 @@
+ int i, ent = 0, pos = 1;
+    for (i = 0; i[s] != '\0'; i++)
+    {
+        if ((i[s] != '-' && i[s] != '+') && i[s] != 32)
+        {
+            ent += (i[s] - 48) * pos;
+            pos = pos * 10;
+            putchar(i[s]);
+        }
+        pos = 1;
+    }
+
+    
+
+    int res = 0;
+    int sign = 1;
+    int i = 0;
+
+    if (s[0] == '-')
+    {
+        sign = -1;
+        i++;
+    }
+
+    for (; s[i] != '\0'; ++i)
+    {
+        res = res * 10 + s[i] - '0';
+    }

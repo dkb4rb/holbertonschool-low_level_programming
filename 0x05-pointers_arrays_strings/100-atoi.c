@@ -1,38 +1,23 @@
-#include <stdio.h>
+#include <stdlib.h>
 #include "holberton.h"
-
-/**
-* _atoi - Function that calculate a numbers, only nombers in a string
-* @s: String that evaluates
-* Return: The integer conversion
-*/
 
 int _atoi(char *s)
 {
-	int x, num, len;
 
-	num = 0;
+    int sign = 1;
+    unsigned int num = 0;
 
-	for (x = 0; s[x] != '\0'; x++)
-	{
-		if (s[x] >= '0' && s[x] <= '9')
-		{
-			(num = ((num * 10) + s[x]) - '0');
-			if (s[x + 1] == ' ')
-			{
-				break;
-			}
-		}
-	}
+    do
+    {
+        if (*s == '-')
+            sign *= -1;
 
-	for (len = 0; s[len] != '\0'; len++)
-	{
-		if (s[len] == '-' && s[len + 1] >= '0' && s[len + 1] <= '9')
-		{
-			num = num * (-1);
-			break;
-		}
-	}
+        else if (*s >= '0' && *s <= '9')
+            num = (num * 10) + (*s - '0');
 
-	return (num);
+        else if (num > 0)
+            break;
+
+    } while (*s++);
+    return (num * sign);
 }
