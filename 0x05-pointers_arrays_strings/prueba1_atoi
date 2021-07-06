@@ -1,14 +1,4 @@
- int i, ent = 0, pos = 1;
-    for (i = 0; i[s] != '\0'; i++)
-    {
-        if ((i[s] != '-' && i[s] != '+') && i[s] != 32)
-        {
-            ent += (i[s] - 48) * pos;
-            pos = pos * 10;
-            putchar(i[s]);
-        }
-        pos = 1;
-    }
+
 
     
 
@@ -25,4 +15,25 @@
     for (; s[i] != '\0'; ++i)
     {
         res = res * 10 + s[i] - '0';
+    }
+
+
+
+      while (s)
+    {
+        if (*s == '-')
+        {
+            sign *= -1;
+        }
+        else if (*s >= '0' && *s <= '9')
+        {
+            num = (num * 10) + (*s - '0');
+        }
+
+        else if (num > 0)
+        {
+            break;
+        }
+
+        s++;
     }
