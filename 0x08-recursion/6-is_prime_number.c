@@ -8,7 +8,7 @@
 */
 int prime_check(int z, int d)
 {
-	if (z < 2 || z % d == 0)
+	if (d < 2 || d % z == 0)
 		return (0);
 	else if (z > d / 2)
 		return (1);
