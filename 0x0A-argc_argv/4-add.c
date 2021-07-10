@@ -11,7 +11,7 @@ int _atoi(char *s);
 
 int main(int argc, char **argv)
 {
-	int i = 0, suma = 0;
+	int i, suma = 0;
 
 	if (argc < 1)
 	{
