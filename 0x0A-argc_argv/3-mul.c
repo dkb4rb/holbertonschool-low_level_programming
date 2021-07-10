@@ -1,7 +1,5 @@
 #include <stdio.h>
-
-int mult(int p, int s);
-int _atoi(char *s);
+#include <stdlib.h>
 
 /**
  *main -  program that prints its name, followed by a new line.
@@ -12,59 +10,17 @@ int _atoi(char *s);
 
 int main(int argc, char **argv)
 {
-	int v1, v2, rslt;
+	int v1, v2;
 
 	if (argc != 3)
 	{
 		printf("Error");
 		return (1);
 	}
-	v1 = _atoi(argv[1]);
-	v2 = _atoi(argv[2]);
-	rslt = mult(v1, v2);
+	v1 = atoi(argv[1]);
+	v2 = atoi(argv[2]);
 
-	printf("%d", rslt);
-	(void)argc;
+	printf("%d\n", v1 * v2);
+	
 	return (0);
-}
-
-/**
-* _atoi - Function that calculate a numbers, only nombers in a string
-* @s: String that evaluates
-* Return: The integer conversion
-*/
-
-int _atoi(char *s)
-{
-	int sign = 1;
-	unsigned int num = 0;
-
-	do {
-		if (*s == '-')
-			sign *= -1;
-
-		else if (*s >= '0' && *s <= '9')
-			num = (num * 10) + (*s - '0');
-
-		else if (num > 0)
-			break;
-
-	} while (*s++);
-	return (num * sign);
-}
-
-/**
-* mult - Function that calculate a numbers.
-* @p: value 1 to mult
-* @s: value 2 to mult
-* Return: Mult
-*/
-
-int mult(int p, int s)
-{
-	int rst;
-
-	rst = p * s;
-
-	return (rst);
 }
