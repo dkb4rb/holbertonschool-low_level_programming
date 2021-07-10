@@ -11,24 +11,40 @@ int _atoi(char *s);
 
 int main(int argc, char *argv[])
 {
-	int i, suma = 0;
+	int i;
+	int j;
+	int c;
+	int sum;
+	char *s;
 
-	if (argc < 1)
-		return (0);
+	sum = 0;
+	c = 0;
+
+	i = 1;
+	while (i < argc)
+	{
+		s = argv[i];
+		j = 0;
+		while (s[j] != '\0')
+		{
+			if (s[j] < '0' || s[j] > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
+			j++;
+		}
+		i++;
+	}
 
 	for (i = 1; i < argc; i++)
 	{
-		if (!_atoi(argv[i]))
-		{
-			printf("%s\n", "Error");
-			return (1);
-		}
-		suma += _atoi(argv[i]);
+		c = _atoi(argv[i]);
+		sum = sum + c;
 	}
-	printf("%d\n", suma);
-
+	printf("%d\n", sum);
 	return (0);
-} 
+}
 
 /**
 * _atoi - Function that calculate a numbers, only nombers in a string
