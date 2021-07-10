@@ -9,29 +9,26 @@ int _atoi(char *s);
  *Return: null value
  */
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 	int i, suma = 0;
 
 	if (argc < 1)
-	{
 		return (0);
-	}
 
 	for (i = 1; i < argc; i++)
 	{
-		if (!_atoi(argv[i]))
+		if (!atoi(argv[i]))
 		{
 			printf("%s\n", "Error");
 			return (1);
 		}
-		suma +=_atoi(argv[i]);
+		suma += atoi(argv[i]);
 	}
-
 	printf("%d\n", suma);
 
 	return (0);
-}
+} 
 
 /**
 * _atoi - Function that calculate a numbers, only nombers in a string
