@@ -24,7 +24,6 @@ int main(int argc, char **argv)
 	rslt = mult(v1, v2);
 
 	printf("%d\n", rslt);
-	
 	return (0);
 }
 
