@@ -11,7 +11,7 @@ int _atoi(char *s);
 
 int main(int argc, char *argv[])
 {
-	int i, j, c,sum;
+	int i, j, c, sum;
 	char *s;
 
 	sum = 0;
