@@ -68,7 +68,11 @@ char *str_concat(char *s1, char *s2)
 	}
 	else
 	{
-		return NULL;
+		char *buffer = (char *)malloc(sizeof(char *) * 1);
+
+		buffer[0] = '\0';
+
+		return (buffer);
 	}
 }
 /**
