@@ -12,7 +12,7 @@ int main(void)
 {
     char *s;
 
-    s = str_concat("", "Hello");
+    s = str_concat("Hello", NULL);
     if (s == NULL)
     {
         printf("failed\n");
@@ -20,5 +20,24 @@ int main(void)
     }
     printf("%s\n", s);
     free(s);
+
+    s = str_concat(NULL, "Hello");
+    if (s == NULL)
+    {
+        printf("failed\n");
+        return (1);
+    }
+    printf("%s\n", s);
+    free(s);
+
+    s = str_concat(NULL, NULL);
+    if (s == NULL)
+    {
+        printf("failed\n");
+        return (1);
+    }
+    printf("%s\n", s);
+    free(s);
+
     return (0);
 }
