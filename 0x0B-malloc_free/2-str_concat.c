@@ -61,7 +61,7 @@ char *str_concat(char *s1, char *s2)
 		{
 
 			copy(buffer, s1, s2);
-			buffer[lenght1 + 1 + lenght1] = '\0';
+			buffer[lenght2 + 1 + lenght1] = '\0';
 		}
 
 		return buffer;
