@@ -6,6 +6,8 @@
 
 #include "holberton.h"
 
+#include <stdio.h>
+#include <stdlib.h>
 int len(char *str);
 int lenR(char *str, int counter);
 void copy(char *dest, char *src1, char *src2);
@@ -22,13 +24,28 @@ char *str_concat(char *s1, char *s2)
 {
 	if (s1 || s2)
 	{
-		int length = len(s1);
-		int length2 = len(s2);
-		int result = length + length2;
-		char *buffer = (char *)malloc(sizeof(char) * result + 1);
+
+		int length = 0;
+		int length2 = 0;
+		int result = 0;
+		char *buffer = NULL;
+
+		if (s1)
+		{
+			length = len(s1);
+		}
+
+		if (s2)
+		{
+			length = len(s2);
+		}
+
+		result = length + length2;
+		buffer = (char *)malloc(sizeof(char) * result + 1);
 
 		if (buffer)
 		{
+
 			copy(buffer, s1, s2);
 			buffer[result] = '\0';
 		}
@@ -63,7 +80,8 @@ int len(char *str)
 
 int lenR(char *str, int counter)
 {
-	if (str && !(*str))
+
+	if (!(*str))
 	{
 		return (counter);
 	}
@@ -82,19 +100,32 @@ int lenR(char *str, int counter)
  */
 void copy(char *dest, char *src1, char *src2)
 {
+	int state1 = src1 != NULL;
+	int state2 = src2 != NULL;
 
-	if (!*src1 && !*src2)
+	if (state1 && state2 && *src1 && *src2)
 	{
-		;
-	}
-	else
-	{
-
 		if (src1 && *src1)
 		{
 			*dest++ = *src1++;
 		}
 		else if (src2 && *src2)
+		{
+			*dest++ = *src2++;
+		}
+		copy(dest, src1, src2);
+	}
+	else if (state1 && *src1)
+	{
+		if (src1 && *src1)
+		{
+			*dest++ = *src1++;
+		}
+		copy(dest, src1, src2);
+	}
+	else if (state2 && *src2)
+	{
+		if (src2 && *src2)
 		{
 			*dest++ = *src2++;
 		}
