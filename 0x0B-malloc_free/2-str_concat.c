@@ -11,6 +11,7 @@
 int len(char *str);
 int lenR(char *str, int counter);
 void copy(char *dest, char *src1, char *src2);
+void copyS(char *dest, char *src1);
 
 /**
  * str_concat - function that returns a pointer to a newly allocated memory.
@@ -22,42 +23,54 @@ void copy(char *dest, char *src1, char *src2);
 
 char *str_concat(char *s1, char *s2)
 {
-	if (s1 || s2)
+	if (s1 && !s2)
 	{
-
-		int length = 0;
-		int length2 = 0;
-		int result = 0;
-		char *buffer = NULL;
-
-		if (s1)
-		{
-			length = len(s1);
-		}
-
-		if (s2)
-		{
-			length = len(s2);
-		}
-
-		result = length + length2;
-		buffer = (char *)malloc(sizeof(char) * result + 1);
+		int lenght1 = len(s1);
+		char *buffer = (char *)malloc(sizeof(char) * (lenght1 + 1));
 
 		if (buffer)
 		{
 
-			copy(buffer, s1, s2);
-			buffer[result] = '\0';
+			copyS(buffer, s1);
+			buffer[lenght1 + 1] = '\0';
 		}
 
-		return (buffer);
+		return buffer;
+	}
+	else if (s2 && !s1)
+	{
+		int lenght1 = len(s2);
+		char *buffer = (char *)malloc(sizeof(char) * (lenght1 + 1));
+
+		if (buffer)
+		{
+
+			copyS(buffer, s2);
+			buffer[lenght1 + 1] = '\0';
+		}
+
+		return buffer;
+	}
+	else if (s1 && s2)
+	{
+		int lenght1 = len(s1);
+		int lenght2 = len(s2);
+		char *buffer = (char *)malloc(sizeof(char) * (lenght1 + lenght2 + 1));
+
+		if (buffer)
+		{
+
+			copy(buffer, s2, s1);
+			buffer[lenght1 + 1 + lenght1] = '\0';
+		}
+
+		return buffer;
 	}
 	else
 	{
-		return (NULL);
+		return NULL;
 	}
 }
-
 /**
  * len - Functions copy values
  * @str: Destine of de buffer.
@@ -90,6 +103,33 @@ int lenR(char *str, int counter)
 		return (lenR(str + 1, counter + 1));
 	}
 }
+
+/**
+ * copy - Functions copy values
+ * @dest: Destine of de buffer.
+ * @src1: addres of the string search.
+ * @src2: addres of the string 2
+ * Return: If size == 0 or the function fails - NULL.
+ *         Otherwise - a pointer to the array.
+ */
+void copyS(char *dest, char *src1)
+{
+
+	if (!*src1)
+	{
+		;
+	}
+	else
+	{
+
+		if (*src1)
+		{
+			*dest++ = *src1++;
+		}
+		copyS(dest, src1);
+	}
+}
+
 /**
  * copy - Functions copy values
  * @dest: Destine of de buffer.
@@ -100,32 +140,19 @@ int lenR(char *str, int counter)
  */
 void copy(char *dest, char *src1, char *src2)
 {
-	int state1 = src1 != NULL;
-	int state2 = src2 != NULL;
 
-	if (state1 && state2 && *src1 && *src2)
+	if (!*src1 && !*src2)
 	{
-		if (src1 && *src1)
+		;
+	}
+	else
+	{
+
+		if (*src1)
 		{
 			*dest++ = *src1++;
 		}
-		else if (src2 && *src2)
-		{
-			*dest++ = *src2++;
-		}
-		copy(dest, src1, src2);
-	}
-	else if (state1 && *src1)
-	{
-		if (src1 && *src1)
-		{
-			*dest++ = *src1++;
-		}
-		copy(dest, src1, src2);
-	}
-	else if (state2 && *src2)
-	{
-		if (src2 && *src2)
+		else if (*src2)
 		{
 			*dest++ = *src2++;
 		}
