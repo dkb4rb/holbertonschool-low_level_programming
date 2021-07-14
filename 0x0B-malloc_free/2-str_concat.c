@@ -60,7 +60,7 @@ char *str_concat(char *s1, char *s2)
 		if (buffer)
 		{
 
-			copy(buffer, s2, s1);
+			copy(buffer, s1, s2);
 			buffer[lenght1 + 1 + lenght1] = '\0';
 		}
 

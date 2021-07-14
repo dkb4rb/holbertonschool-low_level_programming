@@ -30,7 +30,7 @@ int main(void)
     printf("%s\n", s);
     free(s);
 
-    s = str_concat(NULL, NULL);
+    s = str_concat("Holberton ", "School");
     if (s == NULL)
     {
         printf("failed\n");
