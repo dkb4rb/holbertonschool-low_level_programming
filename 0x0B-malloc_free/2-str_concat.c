@@ -90,11 +90,11 @@ void copy(char *dest, char *src1, char *src2)
 	else
 	{
 
-		if (src1 && *src1)
+		if (!src1 && *src1)
 		{
 			*dest++ = *src1++;
 		}
-		else if (src2 && *src2)
+		else if (!src2 && *src2)
 		{
 			*dest++ = *src2++;
 		}
