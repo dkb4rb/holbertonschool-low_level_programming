@@ -20,7 +20,7 @@ void copy(char *dest, char *src1, char *src2);
 
 char *str_concat(char *s1, char *s2)
 {
-	if (s1 && s2)
+	if (s1 || s2)
 	{
 		int length = len(s1);
 		int length2 = len(s2);
