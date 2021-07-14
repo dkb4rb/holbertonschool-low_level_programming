@@ -30,15 +30,13 @@ char *_strdup(char *str);
 void copy(char *src, char *dest)
 {
 	if (!*src)
-		9
-		{
-			*dest = *src;
-			return;
-		}
+	{
+		*dest = *src;
+	}
 	else
 	{
 		*dest = *src;
-		return (copy(src + 1, dest + 1));
+		copy(src + 1, dest + 1);
 	}
 }
 
@@ -85,7 +83,7 @@ char *_strdup(char *str)
 	if (str)
 	{
 		int Lenght = len(str);
-		char *copystr = NULL;
+		char *copystr = (char *)malloc(sizeof(char) * Lenght);
 
 		copy(str, copystr);
 		return (copystr);
