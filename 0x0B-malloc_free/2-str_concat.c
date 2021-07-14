@@ -35,7 +35,7 @@ char *str_concat(char *s1, char *s2)
 			buffer[lenght1 + 1] = '\0';
 		}
 
-		return buffer;
+		return (buffer);
 	}
 	else if (s2 && !s1)
 	{
@@ -49,7 +49,7 @@ char *str_concat(char *s1, char *s2)
 			buffer[lenght1 + 1] = '\0';
 		}
 
-		return buffer;
+		return (buffer);
 	}
 	else if (s1 && s2)
 	{
@@ -64,7 +64,7 @@ char *str_concat(char *s1, char *s2)
 			buffer[lenght2 + 1 + lenght1] = '\0';
 		}
 
-		return buffer;
+		return (buffer);
 	}
 	else
 	{
@@ -109,10 +109,9 @@ int lenR(char *str, int counter)
 }
 
 /**
- * copy - Functions copy values
+ * copyS - Functions copy values
  * @dest: Destine of de buffer.
- * @src1: addres of the string search.
- * @src2: addres of the string 2
+ * @src1: addres of the string search
  * Return: If size == 0 or the function fails - NULL.
  *         Otherwise - a pointer to the array.
  */
