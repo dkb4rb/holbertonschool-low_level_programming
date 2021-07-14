@@ -27,10 +27,12 @@ char *str_concat(char *s1, char *s2)
 		int result = length + length2;
 		char *buffer = (char *)malloc(sizeof(char) * result + 1);
 
-		copy(buffer, s1, s2);
-
 		if (buffer)
+		{
+			copy(buffer, s1, s2);
 			buffer[result] = '\0';
+		}
+
 		return (buffer);
 	}
 	else
@@ -81,7 +83,7 @@ int lenR(char *str, int counter)
 void copy(char *dest, char *src1, char *src2)
 {
 
-	if (src1 && !*src1 && src2 && !*src2)
+	if (!*src1 && !*src2)
 	{
 		;
 	}
