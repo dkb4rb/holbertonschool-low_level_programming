@@ -63,7 +63,7 @@ int len(char *str)
 
 int lenR(char *str, int counter)
 {
-	if (!(*str))
+	if (str && !(*str))
 	{
 		return (counter);
 	}
