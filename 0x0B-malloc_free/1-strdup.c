@@ -2,9 +2,6 @@
  * File: 0-create_array.c
  * Auth: Juan Duque
  * Medellin(Ant)
- * linkeding = https://www.linkedin.com/in/juan-duque-5125441b2
- * Twitter = https://twitter.com/juanduq42081660
- * GitHub = https://www.github.com/DKBARB10*
  */
 
 #include "holberton.h"
