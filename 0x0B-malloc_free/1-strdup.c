@@ -29,7 +29,11 @@ char *_strdup(char *str);
 
 void copy(char *src, char *dest)
 {
-	if (!*src)
+	if (!dest)
+	{
+		;
+	}
+	else if (!*src)
 	{
 		*dest = *src;
 	}
