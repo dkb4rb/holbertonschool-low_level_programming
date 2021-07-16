@@ -1,4 +1,5 @@
-#include "holberto.h"
+#include "holberton.h"
+#include "stdlib.h"
 
 /**
  * _realloc - Entry point
