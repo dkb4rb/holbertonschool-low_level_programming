@@ -38,8 +38,8 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 
 		if (!Rptr)
 		{
-			return Rptr;
+			return (Rptr);
 		}
-		return Rptr;
+		return (Rptr);
 	}
 }
