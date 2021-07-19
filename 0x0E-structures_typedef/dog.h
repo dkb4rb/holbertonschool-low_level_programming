@@ -1,6 +1,7 @@
 #ifndef DOG_H
 #define DOG_H
 
+int _putchar(char c);
 /**
 *struct dog - Initialize struct dog
 *@name:name type char
@@ -10,17 +11,12 @@
 *Description: name, age and owner of a dog
 */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-
 typedef struct dog
 {
 	char *name;
 	float age;
 	char *owner;
 } dog;
-
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
 typedef dog dog_t;
