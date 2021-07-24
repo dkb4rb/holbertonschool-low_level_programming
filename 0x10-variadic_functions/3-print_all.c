@@ -1,92 +1,79 @@
-#include <stdarg.h>
-#include <stdio.h>
-#include <stdlib.h>
 #include "variadic_functions.h"
-
 /**
-* _strings - Print arguments of type date char.
-* @list: value vector arguments.
-*/
-
-void _strings(va_list list)
+ * print_char - print characters
+ * @arguments: input arguments
+ */
+void print_char(va_list arguments)
 {
-	char *str;
+	printf("%c", va_arg(arguments, int));
+}
+/**
+ * print_int - print integers
+ * @arguments: input arguments
+ */
+void print_int(va_list arguments)
+{
+	printf("%d", va_arg(arguments, int));
+}
+/**
+ * print_float - print floats
+ * @arguments: input arguments
+ */
+void print_float(va_list arguments)
+{
+	printf("%f", va_arg(arguments, double));
+}
+/**
+ * print_string - print strings
+ * @arguments: input arguments
+ */
+void print_string(va_list arguments)
+{
+	char *args = va_arg(arguments, char*);
 
-	str = va_arg(list, char *);
-	if (str == NULL)
+	if (args == NULL)
 	{
-		printf("(nil)");
+		printf("%p", args);
 		return;
 	}
-
-	printf("%s", str);
+	printf("%s", args);
 }
 /**
-* _chart - Print arguments of type date char.
-* @list: value vector arguments.
-*/
-
-void _chart(va_list list)
+ * print_all - prints anything
+ * @format: input string
+ */
+void print_all(const char * const format, ...)
 {
+	simbol_t identifier[] = {
+		{'c', print_char},
+		{'s', print_string},
+		{'f', print_float},
+		{'i', print_int}
+	};
 
-	printf("%c", va_arg(list, int));
-}
-/**
-* _ints - Print arguments of type date int.
-* @list: value vector arguments.
-*/
+	int i = 0, j;
+	char *comma = "";
 
-void _ints(va_list list)
-{
+	va_list arguments;
 
-	printf("%i", va_arg(list, int));
-}
+	va_start(arguments, format);
 
-/**
-* _floats - Print arguments of type date float.
-* @list: value vector arguments.
-*/
-
-void _floats(va_list list)
-{
-	printf("%f", va_arg(list, double));
-}
-
-/**
-* print_all - Print arguments of the all type of date.
-* @format: this value of the format type
-*/
-
-void print_all(const char *const format, ...)
-{
-	data_t types[] = {
-		{"c", _chart},
-		{"i", _ints},
-		{"f", _floats},
-		{"s", _strings},
-		{NULL, NULL}};
-
-	int index = 0, indexb = 0;
-	va_list list;
-
-	char *separador = "";
-
-	va_start(list, format);
-
-	while (format != NULL && format[index])
+	while (format && format[i])
 	{
-		while (types[indexb].type)
+		j = 0;
+
+		while (j < 4)
 		{
-			if (format[index] == *types[indexb].type)
+			if (identifier[j].all == format[i])
 			{
-				printf("%s", separador);
-				types[indexb].func(list);
-				separador = ", ";
+				printf("%s", comma);
+				identifier[j].func(arguments);
+				comma = ", ";
 			}
-			indexb++;
+			j++;
 		}
-		index++;
+		i++;
 	}
 	printf("\n");
-	va_end(list);
+	va_end(arguments);
 }
