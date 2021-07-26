@@ -2,10 +2,10 @@
 #include <stdlib.h>
 
 /**
- * print_R - prints a string in rot13
- * @R: string to print
+ * rot13 - encodes a string into rot13
+ * @s: string to encode
  *
- * Return: number of chars printed
+ * Return: address of s
  */
 char *rot13(char *s)
 {
