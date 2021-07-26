@@ -1,4 +1,6 @@
 #include "holberton.h"
+#include <stdlib.h>
+
 /**
  *_strncpy - convert two lines in one  char
  *@dest: value of a return
@@ -9,10 +11,7 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i = 0, s_l = 0;
-
-	while (src[i++])
-		s_l++;
+	int i = 0, s_l = ;
 
 	for (i = 0; src[i] && i < n; i++)
 		dest[i] = src[i];
