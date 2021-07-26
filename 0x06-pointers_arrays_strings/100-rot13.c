@@ -7,33 +7,22 @@
  *
  * Return: number of chars printed
  */
-int print_R(va_list R)
+char *rot13(char *s)
 {
-    char *str;
-    unsigned int i, j;
-    int count = 0;
-    char in[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-    char out[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	int i, j;
+	char a[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char b[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-    str = va_arg(R, char *);
-    if (str == NULL)
-        str = "(ahyy)";
-    for (i = 0; str[i]; i++)
-    {
-        for (j = 0; in[j]; j++)
-        {
-            if (in[j] == str[i])
-            {
-                _putchar(out[j]);
-                count++;
-                break;
-            }
-        }
-        if (!in[j])
-        {
-            _putchar(str[i]);
-            count++;
-        }
-    }
-    return (count);
+	for (i = 0; *(s + i); i++)
+	{
+		for (j = 0; j < 52; j++)
+		{
+			if (a[j] == *(s + i))
+			{
+				*(s + i) = b[j];
+				break;
+			}
+		}
+	}
+	return (s);
 }
