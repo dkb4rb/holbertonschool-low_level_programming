@@ -8,45 +8,59 @@
  * Return: pointer to an array of words
  */
 
-char **strtow(char *str)
+void copy(char *Buffer, char **av, int ac)
 {
-	char **array;
-	int i, j, count, len, k, m;
 
-	count = k = 0;
-	if (str == NULL || str[0] == '\0')
-		return (NULL);
-	for (i = 0; str[i] != '\0'; i++)
+	while (ac--)
 	{
-		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
-			count++;
-	}
-	if (count == 0)
-		return (NULL);
-	array = malloc(((count + 1) * sizeof(char *)));
-	if (array == NULL)
-		return (NULL);
-	for (i = 0; str[i] != '\0' && k < count; i++)
-	{
-		if (str[i] != ' ')
+		while (**av)
 		{
-			len = 0;
-			j = i;
-			while (str[j] != ' ' && str[j] != '\0')
-				j++, len++;
-			array[k] = malloc((len + 1) * sizeof(char));
-			if (array[k] == NULL)
-			{
-				for (k = k - 1; k >= 0; k++)
-					free(array[k]);
-				free(array);
-				return (NULL);
-			}
-			for (m = 0; m < len; m++, i++)
-				array[k][m] = str[i];
-			array[k++][m] = '\0';
+			*Buffer++ = *(*av)++;
 		}
+		*Buffer++ = '\n';
 	}
-	array[k] = NULL;
-	return (array);
+	*Buffer = '\0';
+}
+
+int len(int ac, char **av)
+{
+
+	int result = 1;
+	int counter = 0;
+
+	while (ac--)
+	{
+
+		while (**av)
+		{
+			counter++;
+			(*av)++;
+		}
+		result += counter;
+		counter = 0;
+		result++;
+	}
+	result++;
+
+	return (result);
+}
+
+char *argstostr(int ac, char **av)
+{
+	int result = 0;
+	char *Buffer = NULL;
+
+	if (!ac || !av)
+	{
+		return NULL;
+	}
+
+	result = len(ac, av);
+
+	Buffer = (char *)malloc(sizeof(char) * result);
+
+	if (Buffer)
+		copy(Buffer, av, ac);
+
+	return (Buffer);
 }

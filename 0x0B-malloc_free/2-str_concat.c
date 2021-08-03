@@ -1,5 +1,5 @@
 /*
- * File: 0-create_array.c
+ * File: 2-str_concat.c
  * Auth: Juan Duque
  * Medellin(Ant)
  */
@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+
 int len(char *str);
 int lenR(char *str, int counter);
 void copy(char *dest, char *src1, char *src2);
