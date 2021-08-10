@@ -61,8 +61,8 @@ int cop(char *file_to, char *file_from)
 	file_fd = open(file_from, O_RDONLY);
 	if (file_fd < 0)
 		return (98);
-	file_td = open(file_to, O_CREAT | O_WRONLY | O_TRUNC);
-	if (file_to < 0)
+	file_td = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	if (file_td < 0)
 		return (99);
 	file_r = read(file_fd, buf, 1024);
 	if (file_r < 0)
