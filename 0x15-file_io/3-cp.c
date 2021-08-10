@@ -72,7 +72,7 @@ int cop(char *file_to, char *file_from)
 	{
 		file_w = write(file_td, buf, file_r);
 		if (file_w < 0)
-			return (98);
+			return (99);
 		file_r = read(file_fd, buf, 1024);
 		if (file_r < 0)
 			return (98);
