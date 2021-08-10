@@ -14,7 +14,7 @@ clean :
 	rm -f programa *.o *.gch *.out a
 
 run : 
-	./a Requiscat
+	./a Requiescat
 
 gitt: 
 	git add .1| git commit -m "" | git push 
