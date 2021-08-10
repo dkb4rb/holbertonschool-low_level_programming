@@ -17,5 +17,5 @@ run :
 	./a Requiscat
 
 gitt: 
-	git add .; git commit -m ""; git push 
+	git add .1| git commit -m "" | git push 
 
