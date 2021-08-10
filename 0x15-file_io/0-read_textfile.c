@@ -35,4 +35,3 @@ close(o);
 
 return (w);
 }
-
