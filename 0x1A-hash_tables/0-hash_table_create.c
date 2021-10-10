@@ -6,7 +6,7 @@ hash_table_t *hash_table_create(unsigned long int size);
  * hash_table_create - Create new table of hashing
  * @size: thi is size of the array of hash
  * Return: new has table
- **/
+ */
 
 hash_table_t *hash_table_create(unsigned long int size)
 {
