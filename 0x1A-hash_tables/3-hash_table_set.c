@@ -45,12 +45,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new->key = strdup(key);
 	if (new->key == NULL)
 	{
-		free(value_copy);
+		free(new);
 		return (0);
 	}
 	new->value = value_copy;
 	new->next = ht->array[index];
 	ht->array[index] = new;
 
-	return (0);
+	return (1);
 }
