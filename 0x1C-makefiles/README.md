@@ -19,6 +19,6 @@ This repository contains programs to learning news concepts to Makefile Compiler
 
 <p align="center">
   <img
-    src="https://intranet.hbtn.io/assets/holberton-logo-full-black-157ccfa3d2134776c1e3f78c0fe682968e8848b64fcacc6187976044f75f35a8.png"
+    src="https://blog.holbertonschool.com/wp-content/uploads/2015/09/holberton-logo-71243d031b1b54a2a59a7ce700d2529fd8ad14864799073da29569fb8d4b89251.png"
     alt="Holberton School logo">
 </p>
