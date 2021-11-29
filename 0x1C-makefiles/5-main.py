@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+# 5-main.py
+# Juan Duque <3428@holbertonschool.com>
+
 """
 5-main
 """
@@ -12,4 +15,3 @@ if __name__ == "__main__":
              [0, 0, 0, 0, 0, 0]
            ]
     print(island_perimeter(grid))
-                                                    

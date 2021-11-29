@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+# 5-island_perimeter.py
+# Juan Duque <3428@holbertonschool.com>
+""" Reference to fuction method """
 
 def island_perimeter(grid):
     """ Return the perimeter of an island
