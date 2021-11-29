@@ -12,6 +12,6 @@ all: m.h *.o
 clean:
 	$(RM) *~ $(NAME)
 oclean:
-	$(RM) *.o
+	rm -rf *.o
 fclean: clean oclean
 re: fclean all 
