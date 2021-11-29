@@ -2,12 +2,12 @@
 
 This repository contains programs to learning news concepts to Makefile Compiler
 
--* What are make, Makefiles
--* When, why and how to use Makefiles
--* What are rules and how to set and use them
--* What are explicit and implicit rules
--* What are the most common / useful rules
--* What are variables and how to set and use them
+* What are make, Makefiles
+* When, why and how to use Makefiles
+* What are rules and how to set and use them
+* What are explicit and implicit rules
+* What are the most common / useful rules
+* What are variables and how to set and use them
 
 * [0x1B. C - Makefiles](./0x1B-makefiles)
 
