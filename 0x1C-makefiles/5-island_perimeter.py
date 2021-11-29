@@ -19,5 +19,5 @@ def island_perimeter(grid):
                 cateto_0 += 1
                 if ((j > 0 and grid[i][j - 1] == 1) or (
                         i > 0 and grid[i - 1][j] == 1)):
-                    cateto_1 + = 1
+                    cateto_1 += 1
     return cateto_0 * 4 - cateto_1 * 2
