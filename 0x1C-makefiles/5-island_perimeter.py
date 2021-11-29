@@ -3,6 +3,7 @@
 # Juan Duque <3428@holbertonschool.com>
 """ Reference to Script of Technical Interview """
 
+
 def island_perimeter(grid):
     """ Return the perimeter of an island
         Args:
