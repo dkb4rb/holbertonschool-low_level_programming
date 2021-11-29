@@ -15,7 +15,7 @@ This repository contains programs to learning news concepts to Makefile Compiler
 
 * __Juan Duque__ <[dkb4rb](https://github.com/dkb4rb)>
 
-## pray:
+## :pray:
 
 <p align="center">
   <img
